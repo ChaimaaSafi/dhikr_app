@@ -2,19 +2,27 @@ import { getVerses } from "@/pages/api";
 import React, { useEffect, useState } from "react";
 import Spinner from "@/components/spinner";
 
+const CACHE: any = {};
+
 function Verse() {
   const [data, setData] = useState<any>();
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
-    getVerses()
-      .then((response) => {
-        setLoading(false);
-        setData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
+    if (CACHE["verse"] !== undefined) {
+      setData(CACHE["verse"]);
+      setLoading(false);
+    } else {
+      getVerses()
+        .then((response) => {
+          setLoading(false);
+          CACHE["verse"] = response.data;
+          setData(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        });
+    }
   }, []);
 
   return loading ? (
