@@ -16,3 +16,8 @@ export const getHadith = async () => {
 
   return response;
 };
+export const getDhikr = async () => {
+  const random = Math.floor(Math.random() * 57);
+  const response = await axios.get("./Azkar.json");
+  return response.data[random];
+};

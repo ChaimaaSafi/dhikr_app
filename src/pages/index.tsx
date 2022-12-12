@@ -41,7 +41,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full max-w-[1000px] rounded-3xl py-20 mx-auto">
+          <div className="w-full max-w-[1000px] rounded-3xl py-20 mx-auto overflow-scroll">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
