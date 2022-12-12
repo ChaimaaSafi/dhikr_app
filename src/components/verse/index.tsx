@@ -30,9 +30,12 @@ function Verse() {
       <Spinner />
     </div>
   ) : (
-    <div className="w-full h-full flex flex-col justify-center  items-center">
+    <div
+      className="w-full h-auto flex flex-col justify-center  items-center
+    "
+    >
       <div className="flex items-center">
-        <h1 className="text-3xl font-semibold tracking-wider">
+        <h1 className="text-base mds:text-3xl font-semibold tracking-wider">
           Surat{" "}
           <span className="text-brown-1">
             {" "}
@@ -40,20 +43,20 @@ function Verse() {
           </span>
         </h1>
         <span className="text-xl font-bold px-4">-</span>
-        <h1 className="text-2xl font-semibold tracking-wider font-Gulzar">
+        <h1 className="text-sm md:text-2xl font-semibold tracking-wider font-Gulzar">
           {data?.data[0]?.surah.name}
         </h1>
       </div>
       <div className="py-3">
-        <div className="text-xl flex font-semibold font-Gulzar">
+        <div className="text-base md:text-xl flex font-semibold font-Gulzar">
           Verse
           <span className="text-brown-2 italic px-4">
             {data?.data[0]?.surah.numberOfAyahs}
           </span>
-          <h2 className="text-2xl"> آية</h2>
+          <h2 className="text-base md:text-2xl"> آية</h2>
         </div>
       </div>
-      <div className="py-14 text-2xl mt-8 text-center font-medium items-center flex flex-col space-y-5 border-2 border-brown-2 rounded-xl px-5 w-full max-w-[1000px]">
+      <div className="md:py-14 py-8 text-xl md:text-2xl mt-8 text-center font-medium items-center flex flex-col space-y-5  border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3 md:px-5 w-full md:max-w-[1000px]">
         <p className="tracking-wide  font-Gulzar">{data?.data[0]?.text}</p>
         <p className="tracking-wide ">{data?.data[1]?.text}</p>
       </div>

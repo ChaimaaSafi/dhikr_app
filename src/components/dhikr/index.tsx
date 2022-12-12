@@ -31,8 +31,13 @@ function Dhikr() {
       <Spinner />
     </div>
   ) : (
-    <div className="w-full h-full flex flex-col justify-center  items-center">
-      <div className="py-14 text-2xl mt-8 text-center font-medium items-center flex flex-col space-y-5 border-2 border-brown-2 rounded-xl px-5 w-full max-w-[1000px]">
+    <div className="w-full h-auto flex flex-col justify-center  items-center">
+      <div className="text-xl flex font-semibold font-Gulzar">
+        Dhikr
+        <span className="text-brown-2 italic px-4"> - </span>
+        <h2 className="text-2xl"> ذكر</h2>
+      </div>
+      <div className="md:py-14 py-10 text-xl md:text-2xl mt-4 md:mt-8 text-center font-medium items-center flex flex-col space-y-5 border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3  md:px-5 w-full max-w-[1000px]">
         <p className="tracking-wide  font-Gulzar">{data?.zekr}</p>
         <p className="tracking-wide ">{data?.translate}</p>{" "}
       </div>

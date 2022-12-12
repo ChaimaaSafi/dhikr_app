@@ -8,12 +8,38 @@ export default function Home() {
 
   return (
     <section className="flex max-h-screen w-full flex-col">
-      <div className={`absolute w-[58%] left-0 h-full bg`}></div>
-      <div className="z-50 mx-auto flex h-screen w-full max-w-[1300px] flex-col items-center justify-center px-10">
-        <div className="relative mx-auto flex w-full h-[700px] bg-gray-1 rounded-2xl py-10 shadow-lg">
+      <div className={`absolute w-full lg:w-[58%] left-0 h-full bg`}></div>
+      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px] flex-col items-center justify-center lg:px-10 px-2">
+        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
+          <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
+            <h1
+              className={`text-brown-1 text-base font-semibold ${
+                type === "Verse" && "border-brown-2 border-b-2"
+              }`}
+              onClick={() => setType("Verse")}
+            >
+              Verse
+            </h1>
+            <h1
+              className={`text-brown-1 text-base font-semibold ${
+                type === "Hadith" && "border-brown-2 border-b-2"
+              }`}
+              onClick={() => setType("Hadith")}
+            >
+              Hadith
+            </h1>
+            <h1
+              className={`text-brown-1 text-base font-semibold ${
+                type === "Dhikr" && "border-brown-2 border-b-2"
+              }`}
+              onClick={() => setType("Dhikr")}
+            >
+              Dhikr
+            </h1>
+          </div>
           <div
-            className="absolute -right-14 w-32 h-32 rounded-full flex justify-center items-center bg-brown-1 border 
-          border-black cursor-pointer"
+            className="hidden  lg:absolute lg:-right-14 lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
+          lg:border-black lg:cursor-pointer"
             onClick={() => setType("Verse")}
           >
             <div className="flex flex-col items-center space-y-2">
@@ -22,8 +48,8 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="absolute top-[40%] -right-14 w-32 h-32 rounded-full flex justify-center items-center bg-brown-1 border 
-          border-black cursor-pointer"
+            className="hidden  lg:absolute lg:top-[40%] lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
+          lg:border-black lg:cursor-pointer"
             onClick={() => setType("Hadith")}
           >
             <div className="flex flex-col items-center space-y-2">
@@ -32,8 +58,8 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="absolute bottom-10 -right-14 w-32 h-32 rounded-full flex justify-center items-center bg-brown-1 border
-          border-black cursor-pointer"
+            className="hidden  lg:absolute lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
+          lg:border-black lg:cursor-pointer"
             onClick={() => setType("Dhikr")}
           >
             <div className="flex flex-col items-center">
@@ -41,7 +67,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full max-w-[1000px] rounded-3xl py-20 mx-auto overflow-scroll">
+          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl md:py-20 py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full max-h-[700px]">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
