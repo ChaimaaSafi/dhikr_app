@@ -24,14 +24,13 @@ function Dhikr() {
         });
     }
   }, []);
-  console.log(CACHE["dhikr"]);
 
   return loading ? (
     <div className="w-full h-full flex justify-center items-center">
       <Spinner />
     </div>
   ) : (
-    <div className="w-full h-auto flex flex-col justify-center  items-center">
+    <div className="w-full h-full  flex flex-col justify-center items-center">
       <div className="text-xl flex font-semibold font-Gulzar">
         Dhikr
         <span className="text-brown-2 italic px-4"> - </span>

@@ -31,11 +31,11 @@ function Verse() {
     </div>
   ) : (
     <div
-      className="w-full h-auto flex flex-col justify-center  items-center
+      className="w-full h-auto md:h-full flex flex-col justify-center  items-center
     "
     >
       <div className="flex items-center">
-        <h1 className="text-base mds:text-3xl font-semibold tracking-wider">
+        <h1 className="text-base md:text-3xl font-semibold tracking-wider">
           Surat{" "}
           <span className="text-brown-1">
             {" "}

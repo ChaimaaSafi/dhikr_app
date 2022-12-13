@@ -1,15 +1,49 @@
 import Dhikr from "@/components/dhikr";
 import Hadith from "@/components/hadith";
 import Verse from "@/components/verse";
-import React, { useState } from "react";
+import Image from "next/image";
+import React, { useRef, useState } from "react";
+import contact from "@/public/assets/mail.png";
+import DropDown from "@/components/core/DropDown";
 
 export default function Home() {
   const [type, setType] = useState<string>("Verse");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const buttRef = useRef<any>(null);
+  console.log(isOpen);
 
   return (
     <section className="flex max-h-screen w-full flex-col">
       <div className={`absolute w-full lg:w-[58%] left-0 h-full bg`}></div>
-      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px] flex-col items-center justify-center lg:px-10 px-2">
+      <div className="relative flex justify-end items-center px-10 w-full space-x-2 h-auto py-4 md:h-[80px]">
+        <a
+          className="px-2 text-white text-base md:hidden"
+          href="mailto:hi@example.com"
+        >
+          Contact Me
+        </a>
+        <div className="hidden md:flex md:items-center  md:justify-end h-[50px]  md:w-fit py-5 ">
+          <DropDown
+            text="hi@example.com"
+            open={isOpen}
+            closeDropDown={() => setIsOpen(!isOpen)}
+            buttonRef={buttRef}
+          />
+        </div>
+        <div
+          className="md:cursor-pointer hidden md:flex"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Image
+            src={contact}
+            alt="contact-alt"
+            className="w-10 h-10 hover:bg-brown-2 hover:bg-opacity-10 hover:rounded-full"
+            ref={buttRef}
+          />
+        </div>
+      </div>
+
+      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px] flex-col items-center justify-center lg:px-10 px-2 ">
         <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1

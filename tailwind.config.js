@@ -17,6 +17,20 @@ module.exports = {
         Alegreya: ['"Alegreya"', "sans-serif"],
         Gulzar: ['"Gulzar"', "sans-serif"],
       },
+      keyframes: {
+        "fade-in-right": {
+          from: {
+            opacity: "0",
+            transform: "translateX(300px)",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        "fade-in-right": "fade-in-right 0.8s ease-in-out",
+      },
     },
   },
   plugins: [],
