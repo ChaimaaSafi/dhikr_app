@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center lg:justify-center lg:px-10 px-2 ">
+      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center justify-center lg:px-10 px-2 ">
         <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[630px] lg:h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1
