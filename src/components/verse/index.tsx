@@ -31,7 +31,7 @@ function Verse() {
     </div>
   ) : (
     <div
-      className="w-full h-auto md:h-full flex flex-col justify-center  items-center
+      className="w-full h-auto lg:h-full flex flex-col justify-center  items-center
     "
     >
       <div className="flex items-center">

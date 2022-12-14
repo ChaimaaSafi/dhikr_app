@@ -30,7 +30,7 @@ function Dhikr() {
       <Spinner />
     </div>
   ) : (
-    <div className="w-full h-full  flex flex-col justify-center items-center">
+    <div className="w-full  h-auto lg:h-full flex flex-col justify-center items-center">
       <div className="text-xl flex font-semibold font-Gulzar">
         Dhikr
         <span className="text-brown-2 italic px-4"> - </span>

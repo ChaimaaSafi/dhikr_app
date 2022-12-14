@@ -32,7 +32,7 @@ function Hadith() {
       <Spinner />
     </div>
   ) : (
-    <div className="w-full h-auto md:h-full flex flex-col items-center py-5">
+    <div className="w-full h-auto lg:h-full flex flex-col items-center py-5">
       <div className="text-base lg:text-xl flex font-semibold font-Gulzar">
         Hadith
         <span className="text-brown-2 italic px-4"> - </span>

@@ -15,13 +15,23 @@ export default function Home() {
   return (
     <section className="flex max-h-screen w-full flex-col">
       <div className={`absolute w-full lg:w-[58%] left-0 h-full bg`}></div>
-      <div className="relative flex justify-end items-center px-10 w-full space-x-2 h-auto py-4 md:h-[80px]">
-        <a
-          className="px-2 text-white text-base md:hidden"
-          href="mailto:hi@example.com"
-        >
-          Contact Me
-        </a>
+      <div className="relative flex justify-end items-center px-3 md:px-10 w-full space-x-2 h-auto py-4 md:h-[80px]">
+        <div className="flex w-full justify-between items-center  md:hidden">
+          <h1 className="text-white text-sm md:text-base font-medium">
+            Created by{" "}
+            <a
+              className="font-medium text-amber-100"
+              href="https://www.chaimaasafi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chaimaa Safi
+            </a>
+          </h1>
+          <a className="text-white text-sm" href="mailto:hi@example.com">
+            Contact Me
+          </a>
+        </div>
         <div className="hidden md:flex md:items-center  md:justify-end h-[50px]  md:w-fit py-5 ">
           <DropDown
             text="hi@example.com"
@@ -43,8 +53,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px] flex-col items-center justify-center lg:px-10 px-2 ">
-        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
+      <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center lg:justify-center lg:px-10 px-2 ">
+        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[630px] lg:h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1
               className={`text-brown-1 text-base font-semibold ${
@@ -101,7 +111,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl md:py-20 py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full max-h-[700px]">
+          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl lg:py-20 py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full max-h-[700px]">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
@@ -111,6 +121,19 @@ export default function Home() {
             )}
           </div>
         </div>
+      </div>
+      <div className="hidden md:absolute md:block md:bottom-0 py-2 px-5 text-white text-sm md:text-base font-medium">
+        <h1>
+          Created by{" "}
+          <a
+            className="font-medium text-amber-100 px-1"
+            href="https://www.chaimaasafi.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chaimaa Safi
+          </a>
+        </h1>
       </div>
     </section>
   );
