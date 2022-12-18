@@ -27,9 +27,15 @@ module.exports = {
             opacity: "1",
           },
         },
+        border: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
+
       animation: {
         "fade-in-right": "fade-in-right 0.8s ease-in-out",
+        border: "border 4s ease infinite",
       },
     },
   },

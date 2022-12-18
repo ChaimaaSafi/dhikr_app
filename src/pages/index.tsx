@@ -82,8 +82,12 @@ export default function Home() {
             </h1>
           </div>
           <div
-            className="hidden  lg:absolute lg:-right-14 lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
-          lg:border-black lg:cursor-pointer"
+            className={`hidden lg:absolute lg:-right-14 lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
+          lg:border-black lg:cursor-pointer ${
+            type === "Verse"
+              ? "lg:border-brown-2 lg:border-2 "
+              : "lg:border-black lg:border"
+          }`}
             onClick={() => setType("Verse")}
           >
             <div className="flex flex-col items-center space-y-2">
@@ -92,8 +96,12 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="hidden  lg:absolute lg:top-[40%] lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
-          lg:border-black lg:cursor-pointer"
+            className={`hidden  lg:absolute lg:top-[40%] lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 
+           lg:cursor-pointer ${
+             type === "Hadith"
+               ? "lg:border-brown-2 lg:border-2 "
+               : "lg:border-black lg:border"
+           }`}
             onClick={() => setType("Hadith")}
           >
             <div className="flex flex-col items-center space-y-2">
@@ -102,8 +110,12 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="hidden  lg:absolute lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
-          lg:border-black lg:cursor-pointer"
+            className={`hidden  lg:absolute  lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
+          lg:border-black lg:cursor-pointer  ${
+            type === "Dhikr"
+              ? "lg:border-brown-2 lg:border-2 "
+              : "lg:border-black lg:border"
+          }`}
             onClick={() => setType("Dhikr")}
           >
             <div className="flex flex-col items-center">

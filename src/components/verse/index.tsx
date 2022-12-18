@@ -30,11 +30,8 @@ function Verse() {
       <Spinner />
     </div>
   ) : (
-    <div
-      className="w-full h-auto lg:h-full flex flex-col justify-center  items-center
-    "
-    >
-      <div className="flex items-center">
+    <div className="w-full h-auto content lg:h-full flex flex-col justify-center  items-center">
+      <div className="flex  items-center">
         <h1 className="text-base md:text-3xl font-semibold tracking-wider">
           Surat{" "}
           <span className="text-brown-1">
