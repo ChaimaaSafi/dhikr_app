@@ -28,13 +28,13 @@ export default function Home() {
               Chaimaa Safi
             </a>
           </h1>
-          <a className="text-white text-sm" href="mailto:hi@example.com">
+          <a className="text-white text-sm" href="mailto:heychaimaa@gmail.com">
             Contact Me
           </a>
         </div>
         <div className="hidden md:flex md:items-center  md:justify-end h-[50px]  md:w-fit py-5 ">
           <DropDown
-            text="hi@example.com"
+            text="heychaimaa@example.ma"
             open={isOpen}
             closeDropDown={() => setIsOpen(!isOpen)}
             buttonRef={buttRef}
@@ -54,7 +54,7 @@ export default function Home() {
       </div>
 
       <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center justify-center lg:px-10 px-2 ">
-        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[630px] lg:h-[700px] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
+        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[630px] md:max-h-[90%] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1
               className={`text-brown-1 text-base font-semibold ${
@@ -82,7 +82,7 @@ export default function Home() {
             </h1>
           </div>
           <div
-            className={`hidden lg:absolute lg:-right-14 lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
+            className={`hidden lg:absolute lg:-right-14 hover:border-brown-2 hover:border-2 hover:shadow-brown-2 hover:shadow-lg lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
           lg:border-black lg:cursor-pointer ${
             type === "Verse"
               ? "lg:border-brown-2 lg:border-2 "
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className={`hidden  lg:absolute lg:top-[40%] lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 
+            className={`hidden  lg:absolute lg:top-[40%] hover:border-brown-2 hover:border-2 hover:shadow-brown-2 hover:shadow-lg lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 
            lg:cursor-pointer ${
              type === "Hadith"
                ? "lg:border-brown-2 lg:border-2 "
@@ -110,10 +110,10 @@ export default function Home() {
             </div>
           </div>
           <div
-            className={`hidden  lg:absolute  lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
+            className={`hidden  lg:absolute hover:shadow-brown-2 hover:border-brown-2 hover:border-2 hover:shadow-lg lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
           lg:border-black lg:cursor-pointer  ${
             type === "Dhikr"
-              ? "lg:border-brown-2 lg:border-2 "
+              ? "lg:border-brown-2 lg:border-2"
               : "lg:border-black lg:border"
           }`}
             onClick={() => setType("Dhikr")}
@@ -123,7 +123,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl  py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full max-h-[700px]">
+          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl  py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
