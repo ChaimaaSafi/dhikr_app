@@ -77,7 +77,7 @@ export default function Home() {
       </div>
 
       <div className="z-50  lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center justify-center lg:px-10 px-2 ">
-        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[630px] md:max-h-[90%] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
+        <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[600px] md:max-h-[90%] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1
               className={`text-brown-1 text-base font-semibold ${
@@ -146,7 +146,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl  py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll h-full">
+          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl  py-10  bg-red-1 md:mt-0 lg:mx-auto overflow-scroll md:h-full">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
