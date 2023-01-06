@@ -2,15 +2,26 @@ import Dhikr from "@/components/dhikr";
 import Hadith from "@/components/hadith";
 import Verse from "@/components/verse";
 import Image from "next/image";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import contact from "@/public/assets/mail.png";
 import DropDown from "@/components/core/DropDown";
+import { getViews, updatViews } from "./api/views";
+import { useQuery } from "@tanstack/react-query";
+import View from "@/icons/View";
 
 export default function Home() {
   const [type, setType] = useState<string>("Verse");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { data: views, isLoading } = useQuery(["Views"], getViews);
   const buttRef = useRef<any>(null);
-  console.log(isOpen);
+  useEffect(() => {
+    const isViewedLocal = localStorage.getItem("isViewed");
+    if (!isViewedLocal) {
+      updatViews().then(() => {
+        localStorage.setItem("isViewed", JSON.stringify(true));
+      });
+    }
+  }, []);
 
   return (
     <section className="flex max-h-screen w-full flex-col">
@@ -32,7 +43,19 @@ export default function Home() {
             Contact Me
           </a>
         </div>
-        <div className="hidden md:flex md:items-center  md:justify-end h-[50px]  md:w-fit py-5 ">
+        <div className="hidden md:flex md:items-center  md:justify-between md:w-full  h-[50px]  py-5 ">
+          <div className="text-[#ffffff]">
+            {isLoading ? (
+              <div className="animate-pulse">
+                <View />
+              </div>
+            ) : (
+              <div className="flex items-center space-x-2">
+                <p className="text-[#ffffff] text-lg font-medium">{views}</p>
+                <View />
+              </div>
+            )}
+          </div>
           <DropDown
             text="heychaimaa@example.ma"
             open={isOpen}
