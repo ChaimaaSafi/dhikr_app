@@ -10,7 +10,7 @@ const SEO = {
     site_name: "daydhikr",
     images: [
       {
-        url: "https://www.daydhikr.us/assets/logo.png",
+        url: "https://www.daydhikr.us/logo.png",
         height: 1142,
         width: 1418,
       },
