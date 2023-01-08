@@ -6,11 +6,11 @@ const SEO = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.daydhikr.us/",
+    url: "https://www.daydhikr.us",
     site_name: "daydhikr",
     images: [
       {
-        url: "https://www.daydhikr.us/logo.png",
+        url: "https://www.daydhikr.us/assets/seoLogo.png",
         height: 1142,
         width: 1418,
       },
