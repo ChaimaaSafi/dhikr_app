@@ -38,14 +38,17 @@ function DropDown({
   }
   return (
     <div
-      className={`flex  px-3 z-50  animate-fade-in-right h-[50px] rounded-lg bg-white  border border-gray-1 py-3  shadow-md  ${className}`}
+      className={`flex px-3 z-50 animate-fade-in-right h-[50px] rounded-lg bg-white  border border-gray-1 py-3  shadow-md  ${className}`}
       ref={dropRef}
     >
       <div className="flex items-center space-x-2 w-full">
         <h1 className="text-lg font-medium">{text}</h1>
-        <button className="px-2 text-brown-2  text-sm  underline underline-offset-4">
+        <a
+          className="px-2 text-brown-2  text-sm  underline underline-offset-4"
+          href="mailto:heychaimaa@gmail.com"
+        >
           Contact Me
-        </button>
+        </a>
         <div
           className="flex items-center justify-end text-brown-1 cursor-pointer"
           onClick={() => closeDropDown()}

@@ -36,7 +36,7 @@ function Dhikr() {
         <span className="text-brown-2 italic px-4"> - </span>
         <h2 className="text-2xl"> ذكر</h2>
       </div>
-      <div className="md:py-14 py-10 text-xl md:text-2xl mt-4 md:mt-8 text-center font-medium items-center flex flex-col space-y-5 border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3  md:px-5 w-full max-w-[1000px]">
+      <div className="md:py-14 py-10 text-xl md:text-2xl overflow-scroll  mt-4 md:mt-8 text-center font-medium items-center flex flex-col space-y-5 border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3  md:px-5 w-full max-w-[1000px]">
         <p className="tracking-wide  font-Gulzar">{data?.zekr}</p>
         <p className="tracking-wide ">{data?.translate}</p>{" "}
       </div>

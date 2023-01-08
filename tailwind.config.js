@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         Alegreya: ['"Alegreya"', "sans-serif"],
-        Gulzar: ['"Gulzar"', "sans-serif"],
+        Gulzar: ['"El Messiri"', "sans-serif"],
       },
       keyframes: {
         "fade-in-right": {

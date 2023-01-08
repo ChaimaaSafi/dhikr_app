@@ -53,7 +53,7 @@ function Verse() {
           <h2 className="text-base md:text-2xl"> آية</h2>
         </div>
       </div>
-      <div className="md:py-14 py-8 text-xl md:text-2xl mt-8 text-center font-medium items-center flex flex-col space-y-5  border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3 md:px-5 w-full md:max-w-[950px]">
+      <div className="md:py-14 py-8 text-xl md:text-2xl mt-8 text-center overflow-scroll  font-medium items-center flex flex-col space-y-5  border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3 md:px-5 w-full md:max-w-[950px]">
         <p className="tracking-wide  font-Gulzar">{data?.data[0]?.text}</p>
         <p className="tracking-wide ">{data?.data[1]?.text}</p>
       </div>
