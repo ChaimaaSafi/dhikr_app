@@ -163,11 +163,11 @@ export default function Home() {
           Created by{" "}
           <a
             className="font-medium text-amber-100 px-1"
-            href="https://www.chaimaasafi.com/"
+            href="https://www.chaimaa.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Chaimaa Safi
+            Chaimaa
           </a>
         </h1>
       </div>

@@ -40,8 +40,6 @@ function Hadith() {
       </div>
       <div className="md:py-14 py-10 text-xl md:text-2xl mt-4 md:mt-8 text-center  font-medium items-center overflow-scroll flex flex-col space-y-5 border border-brown-2 rounded-md md:border-2 md:rounded-xl px-3 md:px-5 w-full max-w-[1000px]">
         <p className="tracking-wide  font-Gulzar">{data?.hadithArabic}</p>
-        <p className="tracking-wide  font-Gulzar">{data?.hadithArabic}</p>
-        <p className="tracking-wide  font-Gulzar">{data?.hadithArabic}</p>
         <p className="tracking-wide ">{data?.hadithEnglish}</p>
       </div>
     </div>
