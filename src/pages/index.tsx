@@ -14,14 +14,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { data: views, isLoading } = useQuery(["Views"], getViews);
   const buttRef = useRef<any>(null);
-  useEffect(() => {
-    const isViewedLocal = localStorage.getItem("isViewed");
-    if (!isViewedLocal) {
-      updatViews().then(() => {
-        localStorage.setItem("isViewed", JSON.stringify(true));
-      });
-    }
-  }, []);
+
 
   return (
     <section className="flex max-h-screen w-full flex-col">
@@ -43,19 +36,7 @@ export default function Home() {
             Contact Me
           </a>
         </div>
-        <div className="hidden md:flex md:items-center  md:justify-between md:w-full  h-[50px]  py-5 ">
-          <div className="text-[#ffffff]">
-            {isLoading ? (
-              <div className="animate-pulse">
-                <View />
-              </div>
-            ) : (
-              <div className="flex items-center space-x-2">
-                <p className="text-[#ffffff] text-lg font-medium">{views}</p>
-                <View />
-              </div>
-            )}
-          </div>
+        <div className="hidden md:flex md:items-center md:justify-end md:w-full h-[50px] py-5 ">
           <DropDown
             text="heychaimaa@example.ma"
             open={isOpen}
@@ -77,7 +58,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-50 py-8 lg:mx-auto flex h-screen w-full lg:max-w-[1300px]  flex-col items-center justify-center lg:px-10 px-2 ">
+      <div className="z-50 py-8 lg:mx-auto flex h-screen w-full lg:max-w-[950px] xl:max-w-[1300px] flex-col items-center justify-center lg:px-10 px-2 ">
         <div className="lg:relative lg:mx-auto flex  flex-col w-full h-[600px] md:max-h-[90%] bg-gray-1 rounded-2xl py-5 lg:py-10 shadow-lg justify-center items-center px-3">
           <div className="flex w-full items-center space-x-5  py-5 lg:hidden">
             <h1
@@ -109,7 +90,7 @@ export default function Home() {
             className={`hidden lg:absolute lg:-right-14 hover:border-brown-2 hover:border-2 hover:shadow-brown-2 hover:shadow-lg lg:w-32 lg:h-32 lg:top-[35px] lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border 
           lg:border-black lg:cursor-pointer ${
             type === "Verse"
-              ? "lg:border-brown-2 lg:border-2 "
+              ? "lg:border-brown-2 lg:border-2 shadow-lg  shadow-brown-2"
               : "lg:border-black lg:border"
           }`}
             onClick={() => setType("Verse")}
@@ -123,7 +104,7 @@ export default function Home() {
             className={`hidden  lg:absolute lg:top-[40%] hover:border-brown-2 hover:border-2 hover:shadow-brown-2 hover:shadow-lg lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 
            lg:cursor-pointer ${
              type === "Hadith"
-               ? "lg:border-brown-2 lg:border-2 "
+               ? "lg:border-brown-2 lg:border-2 shadow-lg shadow-brown-2"
                : "lg:border-black lg:border"
            }`}
             onClick={() => setType("Hadith")}
@@ -137,7 +118,7 @@ export default function Home() {
             className={`hidden  lg:absolute hover:shadow-brown-2 hover:border-brown-2 hover:border-2 hover:shadow-lg lg:bottom-10 lg:-right-14 lg:w-32 lg:h-32 lg:rounded-full lg:flex lg:justify-center lg:items-center lg:bg-brown-1 lg:border
           lg:border-black lg:cursor-pointer  ${
             type === "Dhikr"
-              ? "lg:border-brown-2 lg:border-2"
+              ? "lg:border-brown-2 lg:border-2 shadow-lg shadow-brown-2"
               : "lg:border-black lg:border"
           }`}
             onClick={() => setType("Dhikr")}
@@ -147,7 +128,7 @@ export default function Home() {
               <h1 className="text-white text-2xl font-Gulzar mt-3">ذكر</h1>
             </div>
           </div>
-          <div className="w-full flex flex-col lg:max-w-[1000px]  md:rounded-3xl  py-10  md:mt-0 lg:mx-auto overflow-scroll md:h-full">
+          <div className="w-full flex flex-col lg:max-w-[700px] xl:max-w-[1000px] md:rounded-3xl  py-10  md:mt-0 lg:mx-auto overflow-scroll md:h-full">
             {type === "Verse" ? (
               <Verse />
             ) : type === "Hadith" ? (
