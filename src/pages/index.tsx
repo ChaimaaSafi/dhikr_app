@@ -2,17 +2,14 @@ import Dhikr from "@/components/dhikr";
 import Hadith from "@/components/hadith";
 import Verse from "@/components/verse";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import contact from "@/public/assets/mail.png";
 import DropDown from "@/components/core/DropDown";
-import { getViews, updatViews } from "./api/views";
-import { useQuery } from "@tanstack/react-query";
-import View from "@/icons/View";
+import Link from "next/link";
 
 export default function Home() {
   const [type, setType] = useState<string>("Verse");
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { data: views, isLoading } = useQuery(["Views"], getViews);
   const buttRef = useRef<any>(null);
 
 
@@ -140,17 +137,14 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden md:absolute md:block md:bottom-0 py-2 px-5 text-white text-sm md:text-base font-medium">
-        <h1>
+        <Link href="https://www.chaimaasafi.com/"  target="_blank">
           Created by{" "}
-          <a
+          <span
             className="font-medium text-amber-100 px-1"
-            href="https://www.chaimaa.com/"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Chaimaa
-          </a>
-        </h1>
+          </span>
+        </Link>
       </div>
     </section>
   );
